@@ -1,0 +1,120 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #f0f0f0, #d9d9d9);
+  padding: 20px;
+  text-align: center;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+#info-box {
+  font-size: 1.2rem;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#hint-text {
+  font-size: 1rem;
+  color: #555;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль для рабочего пространства */
+#workspace {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#assembly-area {
+  position: relative;
+  height: 400px;
+  width: 300px;
+  border: 3px dashed #007bff;
+  background-color: #eaeaea;
+  background-image: url('assets/схемабез.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.slot[data-slot="block"]       { top: 300px; left: 100px; }
+.slot[data-slot="kolen"]  { top: 150px; left: 100px; }
+.slot[data-slot="porsh"]      { top: 220px; left: 100px; }
+.slot[data-slot="rasp"]       { top: 150px;  left: 60px; }
+.slot[data-slot="gener"]  { top: 150px;  left: 0px; }
+.slot[data-slot="svech"]        { top: 10px;  left: 80px; }
+.slot[data-slot="podd"]  { top: 150px;  left: 200px; }
+
+  .slot {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px dashed #999;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 10px;
+  }
+  .slot:hover {
+    background-color: rgba(0, 123, 255, 0.2);
+    transform: scale(1.1);
+  }
+  .slot img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Сохраняет пропорции изображения */
+  }
+  
+
+/* Панель с деталями */
+#parts {
+
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+  
+.part {
+  border: 3px dashed #007bff;
+  width: 80px;
+  cursor: grab;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.part:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Симулятор сборки мотора</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Приложение визуализации сборки/разборки двигателя "Днепр" МТ-11</h1>
+  <div id="info-box">Начни сборку с блока цилиндров.</div>
+
+  <button id="hint-btn">🔍 Подсказка</button>
+  <div id="hint-text" style="display: none; margin-top: 10px;"></div>
+  
+  <div id="workspace">
+    <div id="assembly-area">
+      <!-- Позиции для сборки -->
+      <div class="slot" data-slot="block"></div>
+      <div class="slot" data-slot="kolen"></div>
+      <div class="slot" data-slot="porsh"></div>
+      <div class="slot" data-slot="rasp"></div>
+      <div class="slot" data-slot="gener"></div>
+      <div class="slot" data-slot="svech"></div>
+      <div class="slot" data-slot="podd"></div>
+    </div>
+
+    <div id="parts">
+      <!-- Перетаскиваемые детали -->
+      <img src="assets/цилиндр.png" class="part" data-name="block">
+      <img src="assets/коленвал.png" class="part" data-name="kolen">
+      <img src="assets/поршень.png" class="part" data-name="porsh">
+      <img src="assets/распред.png" class="part" data-name="rasp">
+      <img src="assets/генер.png" class="part" data-name="gener">
+      <img src="assets/свеча.png" class="part" data-name="svech">
+      <img src="assets/поддон.png" class="part" data-name="podd">
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
